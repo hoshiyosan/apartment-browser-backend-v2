@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+serve = "uvicorn apartment.server:asgi_app --reload"
+lint = "pylint apartment/"
+
+[packages]
+sanic = "*"
+uvicorn = "*"
+gunicorn = "*"
+pymongo = "*"
+marshmallow = "*"
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+
+[requires]
+python_version = "3.8"
